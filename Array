@@ -1,4 +1,4 @@
-
+import java.util.*;
 class Collect {
     public static void main(String args[]) {
         LinkedList<String> al = new LinkedList<String>();
