@@ -1,0 +1,31 @@
+class MissingNumbersExample {
+    public static void main(String[] args) {
+
+        int[] series = {1, 5, 11, 19};
+
+        findMissingNumbers(series);
+    }
+    private static void findMissingNumbers(int[] series) {
+        System.out.print("Missing numbers in the series: ");
+
+        for (int i = 1; i < series.length; i++) {
+            int diff = series[i] - series[i - 1];
+
+            if (diff > 1) {
+                for (int j = 1; j < diff; j++) {
+                    int missingNumber = series[i - 1] + j;
+                    System.out.print(missingNumber + " ");
+                }
+            }
+        }
+
+        System.out.println();
+    }
+    private static void printSeries(int[] series) {
+        System.out.print("Original series: ");
+        for (int num : series) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
